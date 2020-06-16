@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@id/repoListFragment">
+
+    <fragment
+        android:id="@+id/repoListFragment"
+        android:name="com.example.belajarmvvmkotlinjetpack.view.ui.repolist.RepoListFragment"
+        android:label="Trending List"
+        tools:layout="@layout/repo_list_fragment">
+        <action
+            android:id="@+id/action_repoListFragment_to_repoDetailFragment"
+            app:destination="@id/repoDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/repoDetailFragment"
+        android:name="com.example.belajarmvvmkotlinjetpack.view.ui.repodetail.RepoDetailFragment"
+        android:label="RepoDetailFragment">
+        <argument
+            android:name="url"
+            app:argType="string"
+            android:defaultValue="https://github.com/" />
+    </fragment>
+
+</navigation>
